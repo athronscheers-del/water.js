@@ -10,104 +10,193 @@
 <header class="navbar">
     <h2 class="logo">SmartHydrate</h2>
     <nav>
-        <a href="water.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="tracker.html" class="active">Tracker</a>
     </nav>
 </header>
 
 <section class="tracker-container">
+    <h2 id="welcomeMessage">Water Intake Tracker</h2>
 
-    <h2>Water Intake Tracker</h2>
-
+    <!-- User input section -->
     <div class="input-section">
-        <label>Name:</label>
-        <input type="text" placeholder="Enter your name" maxlength="20" class="medium-input">
+        <label style="color: #4a90e2;">Name:</label>
+        <input type="text" id="userName" placeholder="Enter your name" maxlength="20" class="medium-input">
+        <label style="color: #4a90e2;">Age:</label>
+        <input type="number" id="userAge" placeholder="Enter your age" min="1" max="120">
+        <button class="save-user-btn" id="saveUserBtn">Save Info</button>
+    </div>
 
-        <label>Age:</label>
-        <input type="number" placeholder="Enter your age" min="1" max="120">
+    <!-- Personalized recommendation display -->
+    <div class="user-recommendation">
+        <p id="recommendationText" style="color: #2d7df4; font-weight: bold; font-size: 18px;">Enter your age to see personalized hydration goal</p>
+    </div>
+
+    <!-- Statistics dashboard -->
+    <div class="stats-dashboard">
+        <div class="stat-card">
+            <h4>Today's Progress</h4>
+            <div class="stat-value" id="todayProgressBox"><span id="todayGlasses">0</span>/8</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        <div class="stat-card">
+            <h4>Weekly Average</h4>
+            <div class="stat-value"><span id="weeklyAvg">0</span>/8</div>
+        </div>
+        <div class="stat-card">
+            <h4>Completion Rate</h4>
+            <div class="stat-value"><span id="completionRate">0</span>%</div>
+        </div>
     </div>
 
     <div class="weekly-tracker">
-        <h3>Weekly Water Intake Tracker</h3>
-        <p>
-            Click the boxes to track how many glasses of water you drink each day.
-            (8 glasses = daily goal)
+        <h3 style="color: #0066cc; font-weight: bold;">Weekly Water Intake Tracker</h3>
+        <p style="color: darkblue; font-weight: bold; margin-bottom: 20px;">
+            Click on the glasses to mark your water intake!
         </p>
 
-        <!-- Days -->
-        <div class="day-row">
+        <div class="day-row" data-day="Monday">
             <div class="day-label">Monday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Tuesday">
             <div class="day-label">Tuesday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Wednesday">
             <div class="day-label">Wednesday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Thursday">
             <div class="day-label">Thursday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Friday">
             <div class="day-label">Friday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Saturday">
             <div class="day-label">Saturday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
 
-        <div class="day-row">
+        <div class="day-row" data-day="Sunday">
             <div class="day-label">Sunday</div>
+            <div class="daily-progress"><span class="glassCount">0</span>/8</div>
             <div class="water-glasses">
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
-                <div class="glass-checkbox"></div><div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
+                <div class="glass-checkbox"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Weekly total section -->
+    <div class="weekly-summary">
+        <h3 id="weeklyTotalMessage" style="color: #2d7df4; font-weight: bold; font-size: 18px;">Weekly total: 0 glasses</h3>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="action-buttons">
+        <button class="save-button" id="saveBtn">Save Progress</button>
+        <button class="reset-button" id="resetBtn">Reset Week</button>
+    </div>
+
+    <div class="recommend-table">
+        <h3>Recommended Daily Water Intake</h3>
+        <table>
+            <tr>
+                <th>Age Group</th>
+                <th>Cups/Day</th>
+                <th>Glasses/Day (250ml)</th>
+                <th>Bottles (500ml)</th>
+            </tr>
+            <tr><td>1–3 years</td><td>5–6 cups</td><td>5–6 glasses</td><td>2.5–3 bottles</td></tr>
+            <tr><td>4–8 years</td><td>7–8 cups</td><td>7–8 glasses</td><td>3.5–4 bottles</td></tr>
+            <tr><td>9–13 years</td><td>9–10 cups</td><td>9–10 glasses</td><td>4.5–5 bottles</td></tr>
+            <tr><td>14–18 (boys)</td><td>13–14 cups</td><td>13–14 glasses</td><td>6.5–7 bottles</td></tr>
+            <tr><td>14–18 (girls)</td><td>10–11 cups</td><td>10–11 glasses</td><td>5–5.5 bottles</td></tr>
+            <tr><td>Adult men</td><td>13–16 cups</td><td>13–16 glasses</td><td>6.5–8 bottles</td></tr>
+            <tr><td>Adult women</td><td>9–13 cups</td><td>9–13 glasses</td><td>4.5–6.5 bottles</td></tr>
+            <tr><td>Seniors</td><td>8–11 cups</td><td>8–11 glasses</td><td>4–5.5 bottles</td></tr>
+        </table>
     </div>
 
 </section>
 
 <script src="water.js"></script>
+
 </body>
 </html>
