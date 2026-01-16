@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+body.tracker-bg {
+  background-color: #d9ecff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #f0f0f0;
+  color: #2d7df4;
+}
+
+.navbar a.active {
+  background-color: #2d7df4;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar a:active {
+  transform: scale(0.95);
+  background-color: #1e5bb8;
+}
+
+.logo {
+  color: #2d7df4;
+}
+
+.hero-home {
+  position: relative;
+  height: 85vh;
+  border-radius: 20px;
+  margin: 25px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  max-width: 40%;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.cta-button {
+  background: #ff8b3d;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.info-card {
+  width: 40%;
+  background: #93a9be;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.liters {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.hydrated-tag {
+  background: #ffd281;
+  color: #222;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.info-text {
+  width: 50%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  background: rgb(216, 210, 210);
+}
+
+.info-text h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff8b3d;
+  font-weight: bold;
+}
+
+.tracker-container {
+  width: 80%;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+  margin-bottom: 30px;
+}
+
+.input-section label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.input-section input {
+  width: 15%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+.input-section input.medium-input {
+  width: 30%;
+  max-width: 400px;
+}
+
+.recommend-table {
+  margin-top: 30px;
+}
+
+.recommend-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recommend-table th,
+.recommend-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.recommend-table th {
+  background-color: #2d7df4;
+  color: white;
+  font-weight: bold;
+}
+
+.recommend-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+.weekly-tracker {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.weekly-tracker h3 {
+  color: #2d7df4;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.day-row:hover {
+  background: #e9ecef;
+}
+
+.day-label {
+  font-weight: bold;
+  width: 100px;
+  color: #2d7df4;
+  font-size: 16px;
+}
+
+.water-glasses {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+
+.glass-checkbox {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #2d7df4;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.glass-checkbox:hover {
+  border-color: #1e5bb8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 125, 244, 0.2);
+}
+
+.glass-checkbox.checked {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  border-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.glass-checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.glass-checkbox:active {
+  transform: scale(0.95);
+}
+
+.save-button {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  padding: 15px 30px;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #45a049;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    left: 20px;
+    bottom: 30px;
+    max-width: 80%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .info-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .info-card,
+  .info-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tracker-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .day-label {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  .water-glasses {
+    gap: 5px;
+  }
+
+  .glass-checkbox {
+    width: 30px;
+    height: 30px;
+  }
+
+  .glass-checkbox.checked::after {
+    font-size: 16px;
+  }
+}
