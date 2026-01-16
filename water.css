@@ -204,7 +204,6 @@ body.tracker-bg {
   border-left: 4px solid #2d7df4;
 }
 
-/* Statistics Dashboard */
 .stats-dashboard {
   display: flex;
   gap: 20px;
@@ -269,7 +268,6 @@ body.tracker-bg {
   transition: all 0.3s;
 }
 
-/* Highlight today automatically */
 .day-row.today {
   background: #fffacd;
   border: 2px solid #ffd700;
@@ -318,7 +316,6 @@ body.tracker-bg {
   box-shadow: 0 4px 8px rgba(45, 125, 244, 0.2);
 }
 
-/* Smooth fill animation when glass is clicked */
 .glass-checkbox.checked {
   background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
   border-color: #4caf50;
@@ -355,7 +352,7 @@ body.tracker-bg {
   transform: scale(0.95);
 }
 
-/* Goal-based color feedback */
+/* Color feedback based on daily goal: red <4, orange 4-7, green 8+ */
 .day-row.red .glass-checkbox {
   border-color: #d32f2f;
 }
@@ -383,7 +380,6 @@ body.tracker-bg {
   border-color: #4caf50;
 }
 
-/* Subtle pulse when daily goal is reached */
 .day-row.pulse {
   animation: goalPulse 0.6s ease-out;
 }
@@ -480,7 +476,6 @@ body.tracker-bg {
   background-color: #f9f9f9;
 }
 
-/* Notification styles */
 .notification {
   position: fixed;
   bottom: 20px;
