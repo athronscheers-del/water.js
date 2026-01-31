@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHydrate - Tracker</title>
+    <link rel="stylesheet" href="water.css">
+</head>
+<body class="tracker-bg">
+    <div class="navbar">
+        <div class="logo"><strong>SmartHydrate</strong></div>
+        <nav>
+
+            <a href="water.html">Home</a>
+            <a href="tracker.html" class="active">Tracker</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </div>
+
+    <div class="tracker-container">
+        <h1 style="text-align: center; color: #2d7df4;">Water Intake Tracker</h1>
+
+        
+        <div class="input-section">
+            <label for="nameInput">Name <span class="required">*</span></label>
+            <input type="text" id="nameInput" placeholder="Enter your name" class="medium-input">
+            <span class="error-message" id="nameError"></span>
+
+            <label for="ageInput">Age <span class="required">*</span></label>
+            <input type="number" id="ageInput" placeholder="Enter your age" class="medium-input">
+            <span class="error-message" id="ageError"></span>
+
+            <label for="emailInput">Email <span class="required">*</span></label>
+            <input type="email" id="emailInput" placeholder="Enter your email" class="medium-input">
+            <span class="error-message" id="emailError"></span>
+
+            <button class="save-user-btn">Save User Info</button>
+        </div>
+
+        
+        <div class="user-recommendation">
+            <p id="recommendationText" style="margin: 0;">
+                💧 Recommended daily intake: <strong id="recommendedGlasses">8</strong> glasses of water
+            </p>
+        </div>
+
+        
+        <div class="stats-dashboard">
+            <div class="stat-card">
+                <h4>Today's Progress</h4>
+                <div class="stat-value" id="todayProgressValue">0 / 8</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="todayProgressBar" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <h4>Weekly Average</h4>
+                <div class="stat-value" id="weeklyAverageValue">0</div>
+            </div>
+            <div class="stat-card">
+                <h4>Completion Rate</h4>
+                <div class="stat-value" id="completionRateValue">0%</div>
+            </div>
+        </div>
+
+        
+        <div class="weekly-summary">
+            <h3 id="weeklySummaryText">This Week's Summary</h3>
+        </div>
+
+       
+        <div class="weekly-tracker">
+            <h3>Weekly Tracker</h3>
+            <div id="weeklyContainer"></div>
+        </div>
+
+      
+        <div class="action-buttons">
+            <button class="save-button" id="saveButton">💾 Save Progress</button>
+            <button class="reset-button" id="resetButton">🔄 Reset Week</button>
+        </div>
+
+        <div class="recommend-table">
+            <h3 style="color: #2d7df4;">Water Intake Recommendations by Age</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Age Group</th>
+                        <th>Recommended Intake</th>
+                        <th>Glasses per Day</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Children (4-8 years)</td>
+                        <td>1.4 L</td>
+                        <td>5-6 glasses</td>
+                    </tr>
+                    <tr>
+                        <td>Children (9-13 years)</td>
+                        <td>1.6-1.8 L</td>
+                        <td>6-7 glasses</td>
+                    </tr>
+                    <tr>
+                        <td>Teens (14-18 years)</td>
+                        <td>2.2-2.7 L</td>
+                        <td>8-10 glasses</td>
+                    </tr>
+                    <tr>
+                        <td>Adults</td>
+                        <td>2.5-3 L</td>
+                        <td>8-10 glasses</td>
+                    </tr>
+                    <tr>
+                        <td>Seniors (65+ years)</td>
+                        <td>2.2 L</td>
+                        <td>8-9 glasses</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <div id="notification" style="display: none;" class="notification"></div>
+
+    <script src="water.js"></script>
+</body>
+</html>
